@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #121214;
+  background-image: var(--bg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  /*criar inicialização para colocar em qualquer elemento. Nesse caso para trocar cores*/
+  --cor-primaria_card: #f7dd43;
+  --cor-primaria-borda_card: #746615;
+}
+
+body.blue {
+  /*criar classe de cor para o body (nome do elemento seguido de .*/
+  --cor-primaria_card: #338af3;
+  --cor-primaria-borda_card: #338af3;
+  --cor-bg-card-primaria: #202024;
+  --bg: url(./assets/bg-blue.svg);
+}
+
+body.green {
+  --cor-primaria_card: #047c3f;
+  --cor-primaria-borda_card: #047c3f;
+  --cor-bg-card-primaria: #1a1f1b;
+  --bg: url(./assets/bg-green.svg);
+}
+
+body.yellow {
+  --cor-primaria_card: #f7dd43;
+  --cor-primaria-borda_card: #f7dd43;
+  --cor-bg-card-primaria: #202024;
+  --bg: url(./assets/bg-yellow.svg);
+}
+
+#app {
+  width: fit-content;
+  margin: 52px auto;
+}
+
+header {
+  margin-bottom: 63px;
+  text-align: center;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card-1 {
+  padding: 32px 23px;
+  text-align: center;
+  background: var(--cor-bg-card-primaria);
+  border-bottom: 1px solid var(--cor-primaria_card);
+  border-radius: 6px;
+}
+
+.card-1 h2 {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+
+  padding: 8px 16px;
+  border: 1px solid var(--cor-primaria-borda_card);
+  border-radius: 6px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 53px;
+  color: #f7dd43;
+}
+
+.card-1 h2 span {
+  color: #e1e1e6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card-1 ul {
+  display: flex; /*joga um elemento ao lado do outro */
+  flex-direction: column; /*joga um elemento ao abaixo do outro */
+  gap: 24px;
+
+  width: 270px;
+}
+
+.card-1 ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-1 ul li strong {
+  font-family: roboto;
+  font-size: 36px;
+  line-height: 125%;
+  color: #e1e1e6;
+}
+
+.card-1 ul li + li {
+  /* o simbolo + repesenta um SELETOR que deve pegar o elemento igual a esse que exista antes desse. No caso pegar o li que antecede esse li atual*/
+
+  padding-top: 24px;
+  border-top: 1px solid gray; /* coloca uma borda no topo do elemento */
+}
+
+.card-1 ul li strong:hover,
+.card-1 ul li img:hover {
+  transform: scale(1.1);
+}
+.card-1 h2,
+.card-1 ul li strong,
+.card-1 ul li img {
+  transition: transform 0.3s;
+}
+
+.card-1 {
+  opacity: 0;
+  animation: aparecer 0.5s forwards;
+}
+
+@keyframes aparecer {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 700px) {
+  #cards {
+    max-width: 670px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
