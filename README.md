@@ -2,16 +2,15 @@
 
 ![preview](./fundo.png)
 
-> Trilha Explorer 
+> Trilha Explorer
 
 Projeto construído no evento Next Level Week da Rocketseat de novembro de 2022!!!
 
-[Clique aqui para acessar](https://HenriqueHeck.github.io/nlw_Explorer/) 🔗
+[Clique aqui para acessar](https://henriqueheck.github.io/NLW-Copa-2022/) 🔗
 
+## 🛠 Tecnologias Utilizadas
 
-## 🛠 Tecnlogias
-
-- HTML 
+- HTML
 - JS
 - CSS
 - Git e Github
